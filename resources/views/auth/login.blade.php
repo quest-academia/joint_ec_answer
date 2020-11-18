@@ -4,16 +4,18 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-                <div class="text-center">{{ __('ログイン画面') }}</div>
+                <h5 class="text-center">ログイン画面</h5>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('メールアドレス') }}</label>
+                            
+                            <div class="col-md-6 offset-md-3">
 
-                            <div class="col-md-6">
+                                <h6>メールアドレス</h6>
+                                
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
@@ -24,10 +26,12 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('パスワード') }}</label>
+                        <div class="form-group row mt-3">
 
-                            <div class="col-md-6">
+                            <div class="col-md-6 offset-md-3">
+
+                                <h6>パスワード</h6>
+
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
@@ -38,19 +42,17 @@
                             </div>
                         </div>
 
-                        
-
                         <div class="form-group justify-content-center">
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary btn-sm">
                                     {{ __('ログイン') }}
                                 </button>
                             </div>
 
                             <div class="text-center">
 
-                                <a class="btn btn-link" href="{{ route('register') }}">
-                                    {{ __('まだ登録がお済でない方') }}
+                                <a class="btn btn-link mt-4" href="{{ route('register') }}">
+                                    {{ __('まだ登録がお済でない方はこちら') }}
                                 </a>
 
                             </div>
