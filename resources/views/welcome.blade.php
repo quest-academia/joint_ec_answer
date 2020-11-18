@@ -8,17 +8,30 @@
             <h1>やんばるエキスパート　ECサイト</h1>
         </div>
 
-        <div class="row mt-5">
-            <div class="col-md-6 text-center">
-                <h5>まだアカウントをお持ちでない方はこちら</h5>
-                <h5 class="btn btn-primary w-50% mt-3">新規登録</h5>
+        @guest
+
+            <div class="row mt-5">
+                <div class="col-md-6 text-center">
+                    <h5>まだアカウントをお持ちでない方はこちら</h5>
+                    <h5 class="btn btn-primary w-50% mt-3">新規登録</h5>
+                </div>
+
+                <div class="col-md-6 text-center">
+                    <h5>すでにアカウントをお持ちの方はこちら</h5>
+                    <h5 class="btn btn-primary w-50% mt-3">ログイン</h5>
+                </div>
             </div>
 
-            <div class="col-md-6 text-center">
-                <h5>すでにアカウントをお持ちの方はこちら</h5>
-                <h5 class="btn btn-primary w-50% mt-3">ログイン</h5>
+        @else
+
+            <div class="row mt-5">
+                <div class="col-md-6 text-center">
+                    <h5>ご利用いただき、ありがとうございます</h5></br>
+                    <h5>右上のメニューから商品を検索したり、注文したり出来ます</h5>
+                </div>
             </div>
-        </div>
+
+        @endguest
 
     </div>
 
