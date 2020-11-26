@@ -1,7 +1,5 @@
 @extends('layouts.app')
-
 @section('content')
-
     <div class="center">
 
         <div class="text-center text-dark">
@@ -21,6 +19,7 @@
                     {!! link_to_route('login','ログイン',[],['class'=>'btn btn-primary mt-3']) !!}
                 </div>
             </div>
+<<<<<<< HEAD
 
         @else
 
@@ -37,6 +36,13 @@
 
         @endguest
 
+=======
+            <div class="col-md-6 text-center">
+                <h5>すでにアカウントをお持ちの方はこちら</h5>
+                <h5 class="btn btn-primary w-50% mt-3">ログイン</h5>
+            </div>
+        </div>
+        
+>>>>>>> develop
     </div>
-
 @endsection
