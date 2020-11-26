@@ -42,7 +42,7 @@
                     <div class="form-group row">
                        
                         <div class="col-md-6 offset-md-2">
-                        <input id="zipcode" type="text" class="form-control @error('zipcode') is-invalid @enderror" name="zipcode" value="{{ old('zipcode') }}" placeholder="例)ハイフンなしで記入してください" required autocomplete="zipcode" autofocus >
+                        <input id="zipcode" type="text" class="form-control @error('zipcode') is-invalid @enderror" name="zipcode" value="{{ old('zipcode') }}" placeholder="ハイフンなしで記入してください" required autocomplete="zipcode" autofocus >
 
                             @error('zipcode')
                                 <span class="invalid-feedback" role="alert">

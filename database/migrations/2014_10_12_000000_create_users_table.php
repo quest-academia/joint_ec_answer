@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone_number', 16);
             $table->integer('user_classification_id')->unsigned()->index();
-            $table->string('password');
+            $table->string('password', 64);
             $table->string('company_name',128)->nullable();
             $table->char('delete_flag', 1)->nullable();
             $table->rememberToken();
