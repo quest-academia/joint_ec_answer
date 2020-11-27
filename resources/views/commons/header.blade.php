@@ -9,7 +9,6 @@
         <div class="collapse navbar-collapse" id="nav-bar">
             <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav">
-<<<<<<< HEAD
                 @guest
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
@@ -36,14 +35,6 @@
                         @csrf
                     </form>    
                 @endguest
-=======
-                <li class="nav-item">
-                    <a class="nav-link" href="#">ログイン</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">新規登録</a>
-                </li>
->>>>>>> develop
             </ul>
         </div>
 
