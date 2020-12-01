@@ -9,12 +9,32 @@
         <div class="collapse navbar-collapse" id="nav-bar">
             <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">ログイン</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">新規登録</a>
-                </li>
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a>
+                    </li>
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('新規登録') }}</a>
+                        </li>
+                    @endif
+                @else
+                    <li class="nav-item">商品検索</li>
+                    <li class="nav-item">カート</li>
+                    <li class="nav-item">注文履歴</li>
+                    <li class="nav-item">ユーザ情報</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                            {{ __('ログアウト') }}
+                        </a>
+                    </li>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>    
+                @endguest
             </ul>
         </div>
 
