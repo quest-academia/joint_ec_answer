@@ -4,7 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="text-center">{{ __('お客様情報登録') }}</div>
+            <div class="text-center">
+                <h5>お客様情報登録</h5>
+            </div>
 
             <div class="card-body">
                 <form method="POST" action="{{ route('register') }}">
@@ -13,6 +15,7 @@
                     <div class="form-group row">
                         <label for="last_name" class="col-md-1 col-form-label text-md-right">{{ __('姓') }}</label>
                         <div class="col-md-5">
+<<<<<<< HEAD
                             <input
                                 id="last_name"
                                 type="text"
@@ -20,6 +23,10 @@
                                 name="last_name" value="{{ old('last_name') }}"
                                 required autocomplete="last_name"autofocus
                             >
+=======
+                            <input id="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" placeholder="例)山田" required autocomplete="last_name" autofocus >
+
+>>>>>>> develop
                             @error('last_name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -29,6 +36,7 @@
                     
                         <label for="first_name" class="col-md-1 col-form-label text-md-right">{{ __('名') }}</label>
                         <div class="col-md-5">
+<<<<<<< HEAD
                             <input
                                 id="first_name"
                                 type="text"
@@ -36,6 +44,10 @@
                                 name="first_name" value="{{ old('first_name') }}"
                                 required autocomplete="first_name" autofocus
                             >
+=======
+                            <input id="first_name" type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" placeholder="例)花子"　required autocomplete="first_name" autofocus>
+
+>>>>>>> develop
                             @error('first_name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -44,6 +56,7 @@
                         </div>
                     </div>
 
+<<<<<<< HEAD
                     <label for="zipcode" class="col-form-label text-md-right">{{ __('郵便番号') }}</label>
                     <div class="form-group row">
                         <div class="col-md-7 offset-md-2">
@@ -54,6 +67,14 @@
                                 name="zipcode" value="{{ old('zipcode') }}"
                                 required autocomplete="zipcode" autofocus
                             >
+=======
+                    <h6>郵便番号</h6>
+                    <div class="form-group row">
+                       
+                        <div class="col-md-6 offset-md-2">
+                        <input id="zipcode" type="text" class="form-control @error('zipcode') is-invalid @enderror" name="zipcode" value="{{ old('zipcode') }}" placeholder="ハイフンなしで記入してください" required autocomplete="zipcode" autofocus >
+
+>>>>>>> develop
                             @error('zipcode')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -65,6 +86,7 @@
                     <h6>住所</h6>
                     <div class="form-group row">
                         <label for="prefecture" class="col-md-2 col-form-label text-md-right">{{ __('都道府県') }}</label>
+<<<<<<< HEAD
                         <div class="col-md-7">
                             <input
                                 id="prefecture"
@@ -73,6 +95,12 @@
                                 name="prefecture" value="{{ old('prefecture') }}"
                                 required autocomplete="prefecture" autofocus
                             >
+=======
+
+                        <div class="col-md-6">
+                            <input id="prefecture" type="text" class="form-control @error('prefecture') is-invalid @enderror" name="prefecture" value="{{ old('prefecture') }}" placeholder="例)東京都" required autocomplete="prefecture" autofocus>
+
+>>>>>>> develop
                             @error('prefecture')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -83,6 +111,7 @@
 
                     <div class="form-group row">
                         <label for="municipality" class="col-md-2 col-form-label text-md-right">{{ __('市町村区') }}</label>
+<<<<<<< HEAD
                         <div class="col-md-7">
                             <input
                                 id="municipality"
@@ -91,6 +120,12 @@
                                 name="municipality" value="{{ old('municipality') }}"
                                 required autocomplete="municipality" autofocus
                             >
+=======
+
+                        <div class="col-md-6">
+                            <input id="municipality" type="text" class="form-control @error('municipality') is-invalid @enderror" name="municipality" value="{{ old('municipality') }}" placeholder="例)新宿区"　required autocomplete="municipality" autofocus>
+
+>>>>>>> develop
                             @error('municipality')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -101,6 +136,7 @@
 
                     <div class="form-group row">
                         <label for="address" class="col-md-2 col-form-label text-md-right">{{ __('番地') }}</label>
+<<<<<<< HEAD
                         <div class="col-md-7">
                             <input
                                 id="address"
@@ -108,6 +144,12 @@
                                 name="address" value="{{ old('address') }}"
                                 required autocomplete="address" autofocus
                             >
+=======
+
+                        <div class="col-md-6">
+                            <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" placeholder="例)1-1-1"　required autocomplete="address" autofocus>
+
+>>>>>>> develop
                             @error('address')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -118,6 +160,7 @@
 
                     <label for="apartments" class="col-form-label text-md-right">{{ __('マンション・部屋番号') }}</label>
                     <div class="form-group row">
+<<<<<<< HEAD
                         <div class="col-md-7 offset-md-2">
                             <input
                                 id="apartments"
@@ -126,6 +169,13 @@
                                 name="apartments" value="{{ old('apartments') }}"
                                 required autocomplete="apartments" autofocus
                             >
+=======
+                        <label for="apartments" class="col-md-2 col-form-label text-md-right">{{ __('マンション') }}</label>
+
+                        <div class="col-md-6">
+                            <input id="apartments" type="text" class="form-control @error('apartments') is-invalid @enderror" name="apartments" value="{{ old('apartments') }}" placeholder="例)やんばるマンション202号室"　required autocomplete="apartments" autofocus>
+
+>>>>>>> develop
                             @error('apartments')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -134,6 +184,7 @@
                         </div>
                     </div>
 
+<<<<<<< HEAD
                     <label for="email" class="col-form-label text-md-right h5">{{ __('メールアドレス') }}</label>
                     <div class="form-group row">
                         <div class="col-md-7 offset-md-2">
@@ -144,6 +195,14 @@
                                 name="email" value="{{ old('email') }}"
                                 required autocomplete="email"
                             >
+=======
+                    <h6>メールアドレス</h6>
+                    <div class="form-group row">
+
+                        <div class="col-md-6 offset-md-2">
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="例)sample@sample.com"required autocomplete="email">
+
+>>>>>>> develop
                             @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -152,6 +211,7 @@
                         </div>
                     </div>
 
+<<<<<<< HEAD
                     <label for="phone_number" class="col-form-label text-md-right">{{ __('電話番号') }}</label>
                     <div class="form-group row">
                         <div class="col-md-7 offset-md-2">
@@ -162,6 +222,14 @@
                                 name="phone_number" value="{{ old('phone_number') }}"
                                 required autocomplete="phone_number"
                             >
+=======
+                    <h6>電話番号</h6>
+                    <div class="form-group row">
+                        
+                        <div class="col-md-6 offset-md-2">
+                            <input id="phone_number" type="phone_number" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" placeholder="例)09012345678"value="{{ old('phone_number') }}" required autocomplete="phone_number">
+
+>>>>>>> develop
                             @error('phone_number')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -170,6 +238,7 @@
                         </div>
                     </div>
 
+<<<<<<< HEAD
                     <label for="password" class="col-form-label text-md-right">{{ __('パスワード') }}</label>
                     <div class="form-group row">
                         <div class="col-md-7 offset-md-2">
@@ -179,6 +248,14 @@
                                 class="form-control @error('password') is-invalid @enderror"
                                 name="password" required autocomplete="new-password"
                             >
+=======
+                    <h6>パスワード</h6>
+                    <div class="form-group row">
+                        
+                        <div class="col-md-6 offset-md-2">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" placeholder="8文字以上30文字以内" name="password" required autocomplete="new-password">
+
+>>>>>>> develop
                             @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -187,6 +264,7 @@
                         </div>
                     </div>
 
+<<<<<<< HEAD
                     <label for="password-confirm" class="col-form-label text-md-right">{{ __('パスワード確認') }}</label>
                     <div class="form-group row">
                         <div class="col-md-7 offset-md-2">
@@ -197,6 +275,13 @@
                                 name="password_confirmation"
                                 required autocomplete="new-password"
                             >
+=======
+                    <h6>パスワード確認</h6>
+                    <div class="form-group row">
+                        
+                        <div class="col-md-6 offset-md-2">
+                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="パスワードをもう一度入力して下さい"　required autocomplete="new-password">
+>>>>>>> develop
                         </div>
                     </div>
 
