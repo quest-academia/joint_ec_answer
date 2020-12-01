@@ -19,10 +19,10 @@
                         </li>
                     @endif
                 @else
-                    <li class="nav-item">商品検索</li>
-                    <li class="nav-item">カート</li>
-                    <li class="nav-item">注文履歴</li>
-                    <li class="nav-item">ユーザ情報</li>
+                    <li class="nav-item"><a href="#" class="nav-link">商品検索</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">カート</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">注文履歴</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">ユーザ情報</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
@@ -30,7 +30,6 @@
                             {{ __('ログアウト') }}
                         </a>
                     </li>
-
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>    

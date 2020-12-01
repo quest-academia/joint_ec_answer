@@ -7,7 +7,6 @@
         </div>
 
         @guest
-
             <div class="row mt-5">
                 <div class="col-md-6 text-center">
                     <h5>まだアカウントをお持ちでない方はこちら</h5>
@@ -19,9 +18,7 @@
                     {!! link_to_route('login','ログイン',[],['class'=>'btn btn-primary mt-3']) !!}
                 </div>
             </div>
-
         @else
-
             <div class="row mt-5">
                 <div class="col-md-12 text-center">
                     <h5>ご利用いただき、ありがとうございます</h5>
@@ -32,7 +29,6 @@
                 </div>
                     
             </div>
-
         @endguest
 
     </div>
