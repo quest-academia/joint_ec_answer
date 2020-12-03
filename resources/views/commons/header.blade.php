@@ -19,7 +19,7 @@
                         </li>
                     @endif
                 @else
-                    <li class="nav-item"><a href="#" class="nav-link">商品検索</a></li>
+                    <li class="nav-item"><a href="/products/" class="nav-link">商品検索</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">カート</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">注文履歴</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">ユーザ情報</a></li>
