@@ -12,16 +12,16 @@
                         <div class="form-inline">
                             <h6 class="">キーワード検索</h6>
                                 @if($request->input('description'))
-                                    {!! Form::text('description', htmlspecialchars($request->description) ,['class'=>'form-control ml-2', 'style'=>'width:75%']) !!}
+                                    {!! Form::text('description', htmlspecialchars($request->description) ,['class'=>'form-control ml-2', 'style'=>'width:60%']) !!}
                                 @else
-                                    {!! Form::text('description',null,['class'=>'form-control ml-2', 'style'=>'width:75%']) !!}
+                                    {!! Form::text('description',null,['class'=>'form-control ml-2', 'style'=>'width:60%']) !!}
                                 @endif
                         </div>
 
-                        <div class="form-inline">
-                            <p class="">商品カテゴリ</p>
+                        <div class="form-inline mt-2">
+                            <p class="mt-3">商品カテゴリ</p>
                             <select type="text" class="ml-4" name="category_id" style='width:60%'>
-                                <option hidden>未選択</option>
+                                <option>未選択</option>
                                 @foreach($categories as $key=>$category)
                                     @if((!empty($request->category_id) && $request->category_id == $category->id) || old('category_id') == $category->id )
                                         <option value="{{ $category->id }}" selected>{{ $category->category_name }}</option>
@@ -34,14 +34,17 @@
                     </div>
                 </div>
 
-                <div class="col-md-5 mt-5">
-                    <div class="text-left">
+                <div class="col-md-5 mt-4">
+                    <div class="text-md-left text-center">
                         {!! Form::submit('検索',['class'=> 'text-center btn btn-primary']) !!}
                     </div>
                 </div>
             </div>
         {!! Form::close() !!}
 
+        <div>
+            <h5>全{{ $products->count() }}件</h5>
+        </div>
         <div class="row bg-warning border">
             <div class="col-md-5">
                 <h4 class="mt-1">商品</h4>

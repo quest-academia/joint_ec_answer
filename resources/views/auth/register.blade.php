@@ -18,7 +18,7 @@
                             <input
                                 id="last_name"
                                 type="text"
-                                class="form-control @error('last_name') is-invalid @enderror"
+                                class="form-control"
                                 name="last_name" value="{{ old('last_name') }}"
                                 required autocomplete="last_name"autofocus
                             >
@@ -34,7 +34,7 @@
                             <input
                                 id="first_name"
                                 type="text"
-                                class="form-control @error('first_name') is-invalid @enderror"
+                                class="form-control"
                                 name="first_name" value="{{ old('first_name') }}"
                                 required autocomplete="first_name" autofocus
                             >
@@ -52,7 +52,7 @@
                             <input
                                 id="zipcode"
                                 type="text"
-                                class="form-control @error('zipcode') is-invalid @enderror"
+                                class="form-control"
                                 name="zipcode" value="{{ old('zipcode') }}"
                                 required autocomplete="zipcode" autofocus
                             >
@@ -71,7 +71,7 @@
                             <input
                                 id="prefecture"
                                 type="text"
-                                class="form-control @error('prefecture') is-invalid @enderror"
+                                class="form-control"
                                 name="prefecture" value="{{ old('prefecture') }}"
                                 required autocomplete="prefecture" autofocus
                             >
@@ -89,7 +89,7 @@
                             <input
                                 id="municipality"
                                 type="text"
-                                class="form-control @error('municipality') is-invalid @enderror"
+                                class="form-control"
                                 name="municipality" value="{{ old('municipality') }}"
                                 required autocomplete="municipality" autofocus
                             >
@@ -106,7 +106,7 @@
                         <div class="col-md-7">
                             <input
                                 id="address"
-                                type="text" class="form-control @error('address') is-invalid @enderror"
+                                type="text" class="form-control"
                                 name="address" value="{{ old('address') }}"
                                 required autocomplete="address" autofocus
                             >
@@ -124,9 +124,9 @@
                             <input
                                 id="apartments"
                                 type="text"
-                                class="form-control @error('apartments') is-invalid @enderror"
+                                class="form-control"
                                 name="apartments" value="{{ old('apartments') }}"
-                                required autocomplete="apartments" autofocus
+                                autocomplete="apartments" autofocus
                             >
                             @error('apartments')
                                 <span class="invalid-feedback" role="alert">
@@ -142,7 +142,7 @@
                             <input
                                 id="email"
                                 type="email"
-                                class="form-control @error('email') is-invalid @enderror"
+                                class="form-control"
                                 name="email" value="{{ old('email') }}"
                                 required autocomplete="email"
                             >
@@ -160,7 +160,7 @@
                             <input
                                 id="phone_number"
                                 type="phone_number"
-                                class="form-control @error('phone_number') is-invalid @enderror"
+                                class="form-control"
                                 name="phone_number" value="{{ old('phone_number') }}"
                                 required autocomplete="phone_number"
                             >
@@ -178,7 +178,7 @@
                             <input
                                 id="password"
                                 type="password"
-                                class="form-control @error('password') is-invalid @enderror"
+                                class="form-control"
                                 name="password" required autocomplete="new-password"
                             >
                             @error('password')
@@ -189,7 +189,7 @@
                         </div>
                     </div>
 
-                    <label for="password-confirm" class="col-form-label text-md-right">{{ __('パスワード確認') }}</label>
+                    <label for="password-confirm" class="col-form-label text-md-right">{{ __('パスワード再入力') }}</label>
                     <div class="form-group row">
                         <div class="col-md-7 offset-md-2">
                             <input

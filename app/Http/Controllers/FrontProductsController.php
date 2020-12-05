@@ -33,15 +33,17 @@ class FrontProductsController extends Controller
         $categorySearchId = $request->input('category_id');
         $descriptionSearchWord = $request->input('description');
         //キーワードをスペースで区切って配列に入れなおす
-        $overviewKeywords = preg_split('/[\p{Z}\p{Cc}]++/u', $descriptionSearchWord, -1, PREG_SPLIT_NO_EMPTY);
+        // あらゆる空白系の制御文字を対象として区切る
+        // \p{Z} は ASCII 範囲にある制御文字の集合， \p{Cc} は Unicode 範囲にある制御文字の集合
+        $searchWordsArray = preg_split('/[\p{Z}\p{Cc}]++/u', $descriptionSearchWord, -1, PREG_SPLIT_NO_EMPTY);
         // プルダウンメニューで未選択以外を選択した場合、$query->whereで選択したものと一致するカラムを取得
         if ($request->has('category_id') && $categorySearchId != ('未選択')) {
             $query->where('category_id', $categorySearchId)->get();
         }
         // キーワードの文字列を含むカラムを取得
-        foreach($overviewKeywords as $key => $overviewKeyword){
-            if ($overviewKeyword) {
-                $query->where('description', 'like', '%'.self::escapeLike($overviewKeyword).'%')->get();
+        foreach($searchWordsArray as $key => $searchWord){
+            if ($searchWordsArray) {
+                $query->where('description', 'like', '%'.self::escapeLike($searchWord).'%')->get();
             }
         }
 
@@ -54,7 +56,7 @@ class FrontProductsController extends Controller
             'products' => $products,
             'request' => $request,
         ];
-        return view('products.search',$data);
+        return view('products.search', $data);
     }
 
     //LIKE SQLクエリのエスケープ処理
