@@ -154,6 +154,17 @@ return [
       |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'last_name'=>'名字',
+        'first_name'=>'名前',
+        'zipcode'=>'郵便番号',
+        'prefecture'=>'都道府県',
+        'municipality'=>'市町村区',
+        'address'=>'番地',
+        'apartments'=>'マンション・部屋番号',
+        'email'=>'メールアドレス',
+        'phone_number'=>'電話番号',
+        'password'=>'パスワード',
+    ],
 
 ];

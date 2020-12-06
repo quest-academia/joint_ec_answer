@@ -1,6 +1,16 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
+    <div class="justify-content-center">
+        @if ($errors->any())
+        <ul class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                <li class="ml-4">{{ $error }}</li>
+            @endforeach
+        </ul>
+        @endif
+    </div>
+
     <div class="row justify-content-center">
         <div class="col-md-8">
 
