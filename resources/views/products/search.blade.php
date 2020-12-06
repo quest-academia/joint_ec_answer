@@ -19,8 +19,8 @@
                         </div>
 
                         <div class="form-inline mt-2">
-                            <p class="mt-3">商品カテゴリ</p>
-                            <select type="text" class="ml-4" name="category_id" style='width:60%'>
+                            <p class="mt-3 mr-4">商品カテゴリ</p>
+                            <select type="text" class="" name="category_id" style='width:60%'>
                                 <option>未選択</option>
                                 @foreach($categories as $key=>$category)
                                     @if((!empty($request->category_id) && $request->category_id == $category->id) || old('category_id') == $category->id )

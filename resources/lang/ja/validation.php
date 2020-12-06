@@ -34,7 +34,7 @@ return [
         'array'   => ':attribute は :min ～ :max 個まで有効です',
     ],
     'boolean'              => ':attribute の値は true もしくは false のみ有効です',
-    'confirmed'            => ':attribute を確認用と一致させてください',
+    'confirmed'            => ':attribute を再入力欄と一致させてください',
     'date'                 => ':attribute を有効な日付形式にしてください',
     'date_format'          => ':attribute を :format 書式と一致させてください',
     'different'            => ':attribute を :other と違うものにしてください',
