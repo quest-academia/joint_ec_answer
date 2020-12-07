@@ -14,3 +14,5 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('/');
+Route::resource('products', 'FrontProductsController', ['only' => ['index']])->middleware('auth');
+Route::get('search','FrontProductsController@search')->name('search')->middleware('auth');
