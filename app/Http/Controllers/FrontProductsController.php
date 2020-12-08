@@ -63,4 +63,26 @@ class FrontProductsController extends Controller
     public static function escapeLike($str) {
         return str_replace(['\\', '%', '_'], ['\\\\', '\%', '\_'], $str);
     }
+
+     /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //カテゴリーデータをid順に取得
+        $categories = Category::orderBy('id')->get();
+        //商品をidで検索して取得
+        $product = Product::find($id);
+        //商品が見つからない場合ページ遷移
+        if (is_null($product)) {
+            return view('products.productNotFound');
+        }
+        $data=[
+            'categories' => $categories,
+            'product' => $product,
+        ];
+        return view('products.show',$data);
+    }
 }

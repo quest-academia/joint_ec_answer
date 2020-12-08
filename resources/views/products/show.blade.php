@@ -22,7 +22,7 @@
             <div class="justify-content-center form-inline mt-5 @if(!empty($errors->first('quantity'))) has-error @endif">
                 <h5>購入個数</h5>
                 
-                <input type="text" class="form-control form-inline ml-2" style="width:50px">
+                <input type="text" maxlength="3" class="form-control form-inline ml-2" style="width:50px">
                 <h5 class="ml-2">個</h5>
                 <input type="hidden" name="product_id" value="{{ $product -> id }}">
                 
