@@ -18,7 +18,7 @@
                             <input
                                 id="last_name"
                                 type="text"
-                                class="form-control @error('last_name') is-invalid @enderror"
+                                class="form-control  @error('last_name') is-invalid @enderror"
                                 name="last_name" value="{{ old('last_name') }}"
                                 required autocomplete="last_name"autofocus
                             >
@@ -34,7 +34,7 @@
                             <input
                                 id="first_name"
                                 type="text"
-                                class="form-control @error('first_name') is-invalid @enderror"
+                                class="form-control  @error('first_name') is-invalid @enderror"
                                 name="first_name" value="{{ old('first_name') }}"
                                 required autocomplete="first_name" autofocus
                             >
@@ -52,7 +52,7 @@
                             <input
                                 id="zipcode"
                                 type="text"
-                                class="form-control @error('zipcode') is-invalid @enderror"
+                                class="form-control  @error('zipcode') is-invalid @enderror"
                                 name="zipcode" value="{{ old('zipcode') }}"
                                 required autocomplete="zipcode" autofocus
                             >
@@ -106,7 +106,8 @@
                         <div class="col-md-7">
                             <input
                                 id="address"
-                                type="text" class="form-control @error('address') is-invalid @enderror"
+                                type="text" 
+                                class="form-control @error('address') is-invalid @enderror"
                                 name="address" value="{{ old('address') }}"
                                 required autocomplete="address" autofocus
                             >
@@ -126,7 +127,7 @@
                                 type="text"
                                 class="form-control @error('apartments') is-invalid @enderror"
                                 name="apartments" value="{{ old('apartments') }}"
-                                required autocomplete="apartments" autofocus
+                                autocomplete="apartments" autofocus
                             >
                             @error('apartments')
                                 <span class="invalid-feedback" role="alert">
@@ -189,7 +190,7 @@
                         </div>
                     </div>
 
-                    <label for="password-confirm" class="col-form-label text-md-right">{{ __('パスワード確認') }}</label>
+                    <label for="password-confirm" class="col-form-label text-md-right">{{ __('パスワード再入力') }}</label>
                     <div class="form-group row">
                         <div class="col-md-7 offset-md-2">
                             <input

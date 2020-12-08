@@ -8,12 +8,12 @@
 
         @guest
             <div class="row mt-5">
-                <div class="col-md-6 text-center">
+                <div class="col-md-6 text-center mt-3">
                     <h5>まだアカウントをお持ちでない方はこちら</h5>
                     {!! link_to_route('register','新規登録',[],['class'=>'btn btn-primary mt-3']) !!}
                 </div>
 
-                <div class="col-md-6 text-center">
+                <div class="col-md-6 text-center mt-3">
                     <h5>すでにアカウントをお持ちの方はこちら</h5>
                     {!! link_to_route('login','ログイン',[],['class'=>'btn btn-primary mt-3']) !!}
                 </div>

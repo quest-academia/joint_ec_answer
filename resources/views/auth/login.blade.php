@@ -1,6 +1,16 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
+    <div class="justify-content-center">
+        @if ($errors->any())
+        <ul class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                <li class="ml-4">{{ $error }}</li>
+            @endforeach
+        </ul>
+        @endif
+    </div>
+
     <div class="row justify-content-center">
         <div class="col-md-8">
 
@@ -15,7 +25,7 @@
                             <input
                                 id="email"
                                 type="email"
-                                class="form-control @error('email') is-invalid @enderror"
+                                class="form-control"
                                 name="email" value="{{ old('email') }}"
                                 required autocomplete="email" autofocus
                             >
@@ -33,7 +43,7 @@
                             <input
                                 id="password"
                                 type="password"
-                                class="form-control @error('password') is-invalid @enderror"
+                                class="form-control"
                                 name="password"
                                 required autocomplete="current-password"
                             >

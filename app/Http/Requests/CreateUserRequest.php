@@ -33,7 +33,7 @@ class CreateUserRequest extends FormRequest
             'address' => ['required', 'string', 'max:15'],
             'apartments' => ['string', 'max:20'],
             'email' => ['required', 'string', 'email', 'max:100', Rule::unique('users')->ignore($this->user)],
-            'phone_number' => ['required', 'digits_between:1,15'],
+            'phone_number' => ['required'],
             'password' => ['required', 'string', 'min:8', 'max:30', 'confirmed', 'alpha_dash'],
         ];
     }
