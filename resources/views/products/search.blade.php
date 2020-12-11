@@ -73,7 +73,7 @@
                     <h5 class="mt-2">{{ $product->price }}円</h5>
                 </div>
                 <div class="col-md-2">
-                    <button class="btn btn-primary mt-1 mb-1">商品詳細</button>
+                {!! link_to_route('products.show', '商品詳細', ['id'=>$product->id], ['class'=>'btn btn-primary mt-1 mb-1']) !!}
                 </div>
             </div>
         @endforeach
